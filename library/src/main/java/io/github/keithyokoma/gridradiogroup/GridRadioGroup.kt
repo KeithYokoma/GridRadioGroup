@@ -19,10 +19,11 @@ import android.widget.RadioButton
 /**
  * @author KeithYokoma
  */
-class GridRadioGroup(
+class GridRadioGroup @JvmOverloads constructor(
     context: Context,
-    attrs: AttributeSet? = null
-) : GridLayout(context, attrs) {
+    attrs: AttributeSet? = null,
+    defStyle: Int = 0
+) : GridLayout(context, attrs, defStyle) {
     private val childOnCheckedChangeListener: CompoundButton.OnCheckedChangeListener
     private val passThroughHierarchyChangeListener: PassThroughHierarchyChangeListener
 
